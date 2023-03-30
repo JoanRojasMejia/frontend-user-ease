@@ -8,6 +8,7 @@ import { userIntanceRepository } from '../../../infrastructure/connection/instan
 import { userService } from '../../../domain/services/auth/UserService'
 import jwt from 'jwt-decode'
 import useFetchAndLoad from '../../../../global/hooks/useFetchAndLoad'
+import { useEffect } from 'react'
 
 const useAuthViewModel = () => {
   const navigate = useNavigate()
@@ -34,6 +35,10 @@ const useAuthViewModel = () => {
   const sendToAdminPage = () => {
     navigate('/user-admin', { replace: true })
   }
+
+  useEffect(() => {
+    console.log('env', import.meta.env.VITE_URL_APP)
+  }, [])
 
   return { onFinishForm, loadingAuth }
 }
