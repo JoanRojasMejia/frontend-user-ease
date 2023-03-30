@@ -36,10 +36,6 @@ const useAuthViewModel = () => {
     navigate('/user-admin', { replace: true })
   }
 
-  useEffect(() => {
-    console.log('env', import.meta.env.VITE_URL_APP)
-  }, [])
-
   return { onFinishForm, loadingAuth }
 }
 
