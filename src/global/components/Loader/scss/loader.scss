@@ -1,0 +1,17 @@
+@import '../../../scss/configs/mixin_components';
+
+.loaderPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & .containerIcon{
+    height: 20vh;
+    & .icon,
+    & .icon path{
+      @include icon(var(--color-primary), 100%);
+    }
+  }
+}

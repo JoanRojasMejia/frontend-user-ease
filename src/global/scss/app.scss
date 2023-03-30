@@ -1,0 +1,28 @@
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import './normalize';
+@import './configs/mixin_components';
+@import './configs/global';
+
+:root {
+  // --background-page-primary: #f8f9fd;
+  --box-shadow-light: 0px 0px 12px -4px rgba(168, 168, 171, 1);
+  --box-shadow-medium: inset 0em 0em 0em rgb(0 0 0 / 10%), 0em 0.25em 1em rgb(0 0 0 / 24%);
+  --border-radius-sm: 10px;
+  --border-radius-md: 20px;
+
+  --color-primary: #000406;
+  --color-secondary: #006866;
+  --color-paragraph: #fff;
+  // --color-cancel: #b4b2b3;
+}
+
+$font-type: 'Poppins', sans-serif;
+
+* {
+  font-family: $font-type !important;
+  &::selection {
+    color: var(--color-paragraph);
+    background: var(--color-primary);
+  }
+}

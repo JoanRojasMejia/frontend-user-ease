@@ -1,0 +1,74 @@
+@mixin buttonStandard(
+  $backgroundColor,
+  $padding,
+  $margin: 0,
+  $fontSize: 11px,
+  $colorText: var(--color-paragraph)
+) {
+  background-color: $backgroundColor;
+  border-radius: var(--border-radius-md);
+  color: $colorText;
+  font-size: $fontSize;
+  padding: $padding;
+  margin: $margin;
+  & .ant-spin.ant-spin-sm.ant-spin-spinning.spinars {
+    & .ant-spin-dot-item {
+      background-color: var(--color-primary-dark);
+      @if $backgroundColor == var(--color-primary-dark) {
+        background-color: var(--color-primary-light);
+      }
+    }
+  }
+}
+
+@mixin icon($color, $size: 24px) {
+  fill: $color;
+  width: $size;
+  height: $size;
+  transition: all 0.1s ease;
+}
+
+@mixin hoverAndFocus() {
+  caret-color: var(--color-primary-light);
+  &:hover {
+    border-color: var(--color-primary-light);
+  }
+  &:focus,
+  &-focused {
+    box-shadow: 0 0 0 2px rgba(62, 232, 93, 0.33);
+    border: 1px solid var(--color-primary-light);
+    &:hover {
+      border-color: var(--color-primary-light);
+    }
+  }
+}
+
+@mixin hoverAndFocusError() {
+  caret-color: #c62626;
+  border-color: #c62626 !important;
+  &:hover {
+    border-color: #c62626;
+  }
+  &:focus,
+  &-focused {
+    box-shadow: 0 0 0 2px rgba(254, 78, 8, 0.18);
+    border: 1px solid #c62626;
+    &:hover {
+      border-color: #c62626;
+    }
+  }
+}
+
+@mixin scrollCustom() {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #bdb5b4;
+    border-radius: var(--border-radius-md);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #716e6e;
+    border-radius: var(--border-radius-md);
+  }
+}

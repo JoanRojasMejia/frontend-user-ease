@@ -1,0 +1,52 @@
+@import '../../../../global/scss/configs/mixin_components';
+
+.modalCreateUser {
+  & .ant-modal-content {
+    padding: 20px 24px 30px;
+    & .ant-modal-close {
+      top: -15px;
+      right: -15px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      & .ant-modal-close-x {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .anticon {
+          & svg,
+          & svg path {
+            fill: #fff;
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
+    }
+    & .ant-modal-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      & h4 {
+        font-size: 28px;
+        color: var(--color-primary);
+        font-weight: 500;
+      }
+      & .ant-form {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & .ant-form-item {
+          width: 100%;
+          & .icon,
+          & .icon path {
+            @include icon(#000406, 20px);
+          }
+        }
+      }
+    }
+  }
+}

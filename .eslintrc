@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "never"],
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": ["error", { "allow": ["arrowFunctions", "functions"] }],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "max-len": "off",
+    "no-empty": "off",
+    "no-unused-labels": "warn",
+    "no-useless-escape": "off"
+  }
+}

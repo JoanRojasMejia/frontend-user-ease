@@ -1,0 +1,52 @@
+@import '../../../../global/scss/configs/mixin_components';
+
+.loginPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: #fafafa;
+  & .containerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    & .ant-form {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & > .icon,
+      & > .icon path {
+        @include icon(#000406, 100%);
+        margin-bottom: 60px;
+      }
+      & .ant-form-item {
+        width: 100%;
+        & .icon,
+        & .icon path {
+          @include icon(#000406, 20px);
+        }
+        &:last-of-type {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  & .containerBackground {
+    height: 100%;
+    width: 60%;
+    & svg {
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      & .ultimate {
+        transform: translate(100%, 100%);
+      }
+    }
+  }
+}
